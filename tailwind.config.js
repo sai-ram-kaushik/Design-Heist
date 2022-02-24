@@ -4,7 +4,16 @@ module.exports = {
 		'./components/**/*.{js,ts,jsx,tsx}'
 	],
 	theme: {
-		extend: {}
+		fontFamily: {
+			ptsans: 'PT Sans',
+			robotoSlab: 'Roboto Slab',
+			merriWeather: 'Merriweather'
+		},
+		screen: {
+			sm: '480px',
+			md: '780px',
+			lg: '830px'
+		}
 	},
 	plugins: []
 };

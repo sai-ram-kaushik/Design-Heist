@@ -17,3 +17,9 @@ a {
 * {
 	box-sizing: border-box;
 }
+
+.active-label {
+	top: -25px !important;
+	left: 0px !important;
+	font-size: 12px !important;
+}
