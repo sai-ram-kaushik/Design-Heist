@@ -11,11 +11,13 @@ export default function Home() {
 					backgroundSize: 'cover',
 					backgroundPositionX: 'center'
 				}}
-				className='h-screen w-screen flex flex-row'
+				className='h-screen w-screen flex'
 			>
-				<div className='flex-1 h-full flex-col justify-center items-center'>
-					<div className='text-[80px]'>SSS Edutech</div>
-					<div className='text-[30px]'>SSS Edutech</div>
+				<div className='flex-[0.7] pl-[146px] h-full flex flex-col justify-center'>
+					<div className='text-[84px] font-ptsans'>SSS Edutech</div>
+					<div className='text-[48px] font-overpass'>
+						One Stop solution for all your learning needs
+					</div>
 				</div>
 				<div className='flex-1'>hello</div>
 			</div>
