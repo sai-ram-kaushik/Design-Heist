@@ -50,8 +50,8 @@ export default function Home() {
 					backgroundImage:
 						'url(https://raw.githubusercontent.com/ShivamBhasin2002/Design-Heist/master/public/landingPage2.svg)',
 					backgroundRepeat: 'no-repeat',
-					backgroundSize: 'cover',
-					backgroundPositionX: 'center'
+					backgroundSize: 'cover'
+					// backgroundPositionX: 'center'
 				}}
 				className='h-screen w-full md:flex flex-wrap'
 			></section>
