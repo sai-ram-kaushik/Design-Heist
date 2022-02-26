@@ -48,7 +48,7 @@ export default function Home() {
 				id='contact'
 				style={{
 					backgroundImage:
-						'url(https://raw.githubusercontent.com/ShivamBhasin2002/Design-Heist/master/public/landingPage1.svg)',
+						'url(https://raw.githubusercontent.com/ShivamBhasin2002/Design-Heist/master/public/landingPage2.svg)',
 					backgroundRepeat: 'no-repeat',
 					backgroundSize: 'cover',
 					backgroundPositionX: 'center'
