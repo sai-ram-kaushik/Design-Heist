@@ -1,5 +1,40 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import Script from 'next/script';
+
+const Input = (attr) => {
+	return (
+		<div className={`${attr.width} relative inline-block my-[10px]`}>
+			<input
+				{...attr}
+				autoComplete='off'
+				className='w-[97%] py-[10px] text-[18px] text-white mx-auto mb-[30px]  border-b border-[#3DD6D6] outline-none bg-transparent'
+			/>
+			<label
+				id={`${attr.id}Label`}
+				className='absolute top-0 left-0 py-[10px] text-[16px] text-[#3DD6D6] pointer-events-none duration-[0.5s]'
+			>
+				{attr.label}
+			</label>
+			<Script strategy='lazyOnload'>
+				{`
+				let ${attr.id}Input = document.querySelector('#${attr.id}');
+				${attr.id}Input.addEventListener('focusin', (e) => {
+				if (!e.target.value)
+					document
+						.querySelector('#${attr.id}Label')
+						.classList.toggle('active-label');
+				});
+				${attr.id}Input.addEventListener('focusout', (e) => {
+				if (!e.target.value)
+					document
+						.querySelector('#${attr.id}Label')
+						.classList.toggle('active-label');
+				});`}
+			</Script>
+		</div>
+	);
+};
 
 export default function Home() {
 	return (
@@ -45,7 +80,6 @@ export default function Home() {
 				</aside>
 			</section>
 			<section
-				id='contact'
 				style={{
 					backgroundImage:
 						'url(https://raw.githubusercontent.com/ShivamBhasin2002/Design-Heist/master/public/landingPage2.png)',
@@ -119,6 +153,99 @@ export default function Home() {
 					</article>
 				</section>
 			</section>
+			<div
+				id='contact'
+				className='flex flex-wrap-reverse lg:h-screen bg-[#7422FF]'
+			>
+				<form
+					className='flex-grow-[2]'
+					action='https://formsubmit.co/bhasinshivam2002@gmail.com'
+					method='POST'
+					autoComplete='off'
+				>
+					<div className='flex flex-col h-full justify-center mx-auto w-[70%]'>
+						<span className='flex flex-wrap'>
+							<Input
+								id='name'
+								type='text'
+								name='name'
+								label='Full Name'
+								width='flex-grow-1'
+							/>
+							<Input
+								id='email'
+								type='email'
+								name='email'
+								label='Email Address'
+								width='flex-grow-1'
+							/>
+						</span>
+						<span>
+							<Input
+								id='subject'
+								type='text'
+								name='_subject'
+								label='Subject'
+								width='w-full'
+							/>
+						</span>
+						<div className='relative inline-block my-[10px]'>
+							<textarea
+								id='message'
+								type='text-area'
+								name='message'
+								className='w-[97%] h-[100px] max-h-[300px] py-[10px] text-[18px] text-white mx-auto mb-[30px]  border-b border-[#3DD6D6] outline-none bg-transparent overflow-y-hidden'
+							/>
+							<label
+								id='messageLabel'
+								className='absolute top-0 left-0 py-[10px] text-[16px] text-[#3DD6D6] pointer-events-none duration-[0.5s]'
+							>
+								Message
+							</label>
+						</div>
+
+						<input type='hidden' name='_captcha' value='false' />
+						<input type='hidden' name='_next' />
+						<input type='hidden' name='_template' value='table' />
+						<span className='mt-[20px] px-[10px] flex flex-wrap '>
+							<span>
+								<button
+									type='submit'
+									className='btn btn-lg rounded-[15px] bg-[#3DD6D6] text-[#7422FF] px-[20px] py-[14px] mb-[20px] mr-[20px] hover:bg-white hover:text-[#3DD6D6]'
+								>
+									Submit
+								</button>
+							</span>
+						</span>
+					</div>
+				</form>
+				<div className='contact-image-holder flex flex-col flex-grow-1 h-full justify-center'>
+					<span>
+						<img
+							src='/contact.gif'
+							alt='gif'
+							className='text-[100%] w-[100%] max-w-[500px] mx-auto'
+						/>
+					</span>
+				</div>
+				<Script>{`let messageInput = document.querySelector('#message');
+					messageInput.addEventListener('focusin', (e) => {
+						if (!e.target.value)
+							document
+								.querySelector('#messageLabel')
+								.classList.toggle('active-label');
+					});
+					messageInput.addEventListener('focusout', (e) => {
+						if (!e.target.value)
+							document
+								.querySelector('#messageLabel')
+								.classList.toggle('active-label');
+					});
+					messageInput.addEventListener('input', ({ target }) => {
+						target.style.height = 'auto';
+						target.style.height = target.scrollHeight + 'px';
+					});`}</Script>
+			</div>
 		</div>
 	);
 }
