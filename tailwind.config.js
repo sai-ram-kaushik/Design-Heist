@@ -6,7 +6,8 @@ module.exports = {
 	theme: {
 		fontFamily: {
 			recursive: 'Recursive',
-			overpass: 'Overpass'
+			overpass: 'Overpass',
+			pragatiNarrow: 'Pragati Narrow'
 		},
 		screen: {
 			sm: '480px',

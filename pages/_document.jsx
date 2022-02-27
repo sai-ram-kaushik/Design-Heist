@@ -25,6 +25,10 @@ class MyDocument extends Document {
 						href='https://fonts.googleapis.com/css2?family=Overpass&family=Recursive:wght@700&display=swap'
 						rel='stylesheet'
 					/>
+					<link
+						href='https://fonts.googleapis.com/css2?family=Overpass&family=Pragati+Narrow&family=Recursive:wght@700&display=swap'
+						rel='stylesheet'
+					></link>
 				</Head>
 				<body>
 					<Main />
