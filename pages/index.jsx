@@ -8,11 +8,11 @@ const Input = (attr) => {
 			<input
 				{...attr}
 				autoComplete='off'
-				className='w-[97%] py-[10px] text-[18px] text-white mx-auto mb-[30px]  border-b border-[#3DD6D6] outline-none bg-transparent'
+				className='w-[97%] py-[10px] text-[18px] text-white mx-auto mb-[30px]  border-b border-white outline-none bg-transparent'
 			/>
 			<label
 				id={`${attr.id}Label`}
-				className='absolute top-0 left-0 py-[10px] text-[16px] text-[#3DD6D6] pointer-events-none duration-[0.5s]'
+				className='absolute top-0 left-0 py-[10px] text-[16px] text-white pointer-events-none duration-[0.5s]'
 			>
 				{attr.label}
 			</label>
@@ -57,7 +57,7 @@ export default function Home() {
 						One Stop solution for all your learning needs
 					</article>
 					<article className='flex justify-evenly md:justify-start whitespace-nowrap'>
-						<Link href='/courses/'>
+						<Link href='/courses/#categories'>
 							<a className='bg-black hover:bg-[#171717] text-[#7422FF] text-sm md:text-lg rounded-[24px] px-10 py-3 md:mr-4'>
 								Our Courses
 							</a>
@@ -170,14 +170,14 @@ export default function Home() {
 								type='text'
 								name='name'
 								label='Full Name'
-								width='flex-grow-1'
+								width='flex-1'
 							/>
 							<Input
 								id='email'
 								type='email'
 								name='email'
 								label='Email Address'
-								width='flex-grow-1'
+								width='flex-1'
 							/>
 						</span>
 						<span>
@@ -194,11 +194,11 @@ export default function Home() {
 								id='message'
 								type='text-area'
 								name='message'
-								className='w-[97%] h-[100px] max-h-[300px] py-[10px] text-[18px] text-white mx-auto mb-[30px]  border-b border-[#3DD6D6] outline-none bg-transparent overflow-y-hidden'
+								className='w-[97%] h-[100px] max-h-[300px] py-[10px] text-[18px] text-white mx-auto mb-[30px]  border-b border-white outline-none bg-transparent overflow-y-hidden'
 							/>
 							<label
 								id='messageLabel'
-								className='absolute top-0 left-0 py-[10px] text-[16px] text-[#3DD6D6] pointer-events-none duration-[0.5s]'
+								className='absolute top-0 left-0 py-[10px] text-[16px] text-white pointer-events-none duration-[0.5s]'
 							>
 								Message
 							</label>
@@ -211,7 +211,7 @@ export default function Home() {
 							<span>
 								<button
 									type='submit'
-									className='btn btn-lg rounded-[15px] bg-[#3DD6D6] text-[#7422FF] px-[20px] py-[14px] mb-[20px] mr-[20px] hover:bg-white hover:text-[#3DD6D6]'
+									className='btn btn-lg rounded-[15px] text-[#7422FF] font-bold bg-white px-[20px] py-[14px] mb-[20px] mr-[20px] hover:bg-white hover:text-[#3DD6D6]'
 								>
 									Submit
 								</button>
