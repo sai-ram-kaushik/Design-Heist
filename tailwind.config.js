@@ -5,9 +5,9 @@ module.exports = {
 	],
 	theme: {
 		fontFamily: {
-			ptsans: 'PT Sans',
-			robotoSlab: 'Roboto Slab',
-			merriWeather: 'Merriweather'
+			recursive: 'Recursive',
+			overpass: 'Overpass',
+			pragatiNarrow: 'Pragati Narrow'
 		},
 		screen: {
 			sm: '480px',
